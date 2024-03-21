@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRide</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to AIRide</h1>
+        <nav>
+            <button id="userLoginBtn">User Login</button>
+            <button id="userRegisterBtn">User Signup</button>
+            <button id="businessLoginBtn">Business Login</button>
+            <button id="businessRegisterBtn">Business Signup</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- User Registration Form -->
+        <section id="userRegistrationForm" class="hidden">
+            <h2>User Registration</h2>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- User Login Form -->
+        <section id="userLoginForm" class="hidden">
+            <h2>User Login</h2>
+            <form>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- User Dashboard -->
+        <section id="userDashboard" class="hidden">
+            <h2>User Dashboard</h2>
+            <p>Welcome, [User Name]!</p>
+            <div id="offersList">
+                <!-- Dynamically populated list of offers will go here -->
+            </div>
+            <button id="userLogout">Logout</button>
+        </section>
+
+        <!-- Business Login Form -->
+        <section id="businessLoginForm" class="hidden">
+            <h2>Business Login</h2>
+            <form>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+
+        <!-- Business Registration Form Step 01 -->
+        <section id="businessRegistrationFormStep1" class="hidden">
+            <h2>Business Registration - Step 1</h2>
+            <form>
+                <input type="text" name="businessName" placeholder="Business Name" required>
+                <input type="text" name="ownerName" placeholder="Owner Name" required>
+                <input type="tel" name="ownerContact" placeholder="Owner Contact" required>
+                <input type="email" name="ownerEmail" placeholder="Owner Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="button" id="toStep2">Next</button>
+            </form>
+        </section>
+
+        <!-- Business Registration Form Step 02 -->
+        <section id="businessRegistrationFormStep2" class="hidden">
+            <h2>Business Registration - Step 2</h2>
+            <form>
+                <input type="text" name="serviceName" placeholder="Service/Product Name" required>
+                <textarea name="offer" placeholder="Offer Description" required></textarea>
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    Agree to Terms and Services
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Business Dashboard -->
+        <section id="businessDashboard" class="hidden">
+            <h2>Business Dashboard</h2>
+            <p>Welcome, [Business Name]!</p>
+            <form>
+                <input type="text" name="updatedServiceName" placeholder="Update Service/Product Name" required>
+                <textarea name="updatedOffer" placeholder="Update Offer Description" required></textarea>
+                <button type="submit">Update Offer</button>
+            </form>
+            <button id="businessLogout">Logout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>AIRide 2024</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
